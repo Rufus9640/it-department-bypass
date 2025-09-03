@@ -11,12 +11,6 @@ import os
 import sys
 from pathlib import Path
 
-class CustomHandler(http.server.SimpleHTTPRequestHandler):
-    def do_GET(self):
-        if self.path == '/' or self.path == '/index.html':
-            self.path = '/simple.html'
-        return super().do_GET()
-
 def main():
     script_dir = Path(__file__).parent
     os.chdir(script_dir)
@@ -25,7 +19,7 @@ def main():
     
     while PORT < 8010:
         try:
-            with socketserver.TCPServer(("", PORT), CustomHandler) as httpd:
+            with socketserver.TCPServer(("", PORT), http.server.SimpleHTTPRequestHandler) as httpd:
                 print(f"🚀 Auto Page Refresh server starting...")
                 print(f"🌐 Server running at: http://localhost:{PORT}")
                 print(f"📁 Serving files from: {script_dir}")

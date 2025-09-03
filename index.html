@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auto Page Refresh - System Keep Alive</title>
+    
+    <!-- Google AdSense - Replace with your actual AdSense code -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX"
+         crossorigin="anonymous"></script>
+    
     <style>
         * {
             margin: 0;
@@ -189,6 +194,41 @@
         .hidden {
             display: none;
         }
+
+        .monetization {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            border: 1px solid #e1e8ed;
+            text-align: center;
+        }
+
+        .donate-btn {
+            display: inline-block;
+            background-color: #ff6b6b;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 12px;
+            margin: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .donate-btn:hover {
+            background-color: #ff5252;
+        }
+
+        .ad-space {
+            margin: 15px 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border: 1px dashed #ccc;
+            text-align: center;
+            color: #666;
+            font-size: 11px;
+        }
     </style>
 </head>
 <body>
@@ -219,6 +259,29 @@
 
         <div class="footer-info">
             This tool automatically refreshes the page at specified intervals to keep your session active.
+        </div>
+
+        <!-- Ad Space -->
+        <div class="ad-space">
+            <!-- Replace this with actual AdSense ad unit -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <!-- Monetization Section -->
+        <div class="monetization">
+            <div style="font-size: 11px; color: #666; margin-bottom: 8px;">
+                Enjoying this tool? Support the lazy developer! 😄
+            </div>
+            <a href="https://ko-fi.com/YOUR_USERNAME" class="donate-btn" target="_blank">☕ Buy me a coffee</a>
+            <a href="https://paypal.me/YOUR_USERNAME" class="donate-btn" target="_blank">💰 PayPal</a>
         </div>
     </div>
 
